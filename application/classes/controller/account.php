@@ -46,7 +46,7 @@ class Controller_Account extends Controller {
         parent::before();
         $this->auth = A1::instance();
         $this->session =  Session::instance();
-        $this->users   = new Model_Users();
+        $this->users   = new Model_Users;
     }
     
     public function action_index()
@@ -64,7 +64,7 @@ class Controller_Account extends Controller {
             $password = Arr::get($_POST, 'password');
             $remember = (isset($_POST['remember']))?TRUE:FALSE;
             
-            if($this->auth->login($username,$password,$remember))
+            if ($this->auth->login($username,$password,$remember))
             {      
                 $this->request->redirect(Route::url('default',array('controller' => 'backend','action' => FALSE))); 
             }

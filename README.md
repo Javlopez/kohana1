@@ -1,4 +1,4 @@
-This project will be archived due deprecated of Kohana Framework
+This project will be archived due deprecation of Kohana Framework
 
 >  Deprecated PHP Framework
 last stable release: 3.3.6 / 25. July 2016
